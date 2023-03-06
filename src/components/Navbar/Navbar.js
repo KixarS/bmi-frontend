@@ -43,6 +43,14 @@ return (
                                     variant="square"
                                     src="/img/BMI-1-green-rmbg.png"
                                 />
+                           
+                                <Typography
+                                    variant="h4"
+                                    noWrap
+                                    color="black">
+                                    BMI Calculator
+                                </Typography>
+ 
                             </Button> 
 
                         {/* Box for menu (when minimized window) */}
@@ -106,7 +114,6 @@ return (
 
                         {/* box for app bar buttons */}
                         <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' }}} className="hover-underline">
-                                
                                 <nav>
                                     <a href='/analyze'>ANALYZE <FontAwesomeIcon icon={faAward}></FontAwesomeIcon></a>
                                     <a href='/contact'>CONTACT <FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon></a>
