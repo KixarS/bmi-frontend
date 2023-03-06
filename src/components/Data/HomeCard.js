@@ -1,11 +1,12 @@
 import { Box } from '@mui/material'
 import React from 'react'
+import LayeredText from '../Animation/LayeredText/LayeredText'
 
 function HomeCard() {
   return (
     <div>
-      <Box>
-
+      <Box sx={{height:"150rem"}}>
+          <LayeredText/>
       </Box>
     </div>
   )

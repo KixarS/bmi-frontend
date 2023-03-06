@@ -1,14 +1,13 @@
 import React from "react";
-import Home from "./pages/Home";
-import Analyze from "./pages/Analyze";
-import Contact from "./pages/Contact";
+import Home from "./pages/HomePage";
+import Analyze from "./pages/AnalyzePage";
+import Contact from "./pages/ContactPage";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import BacktoTop from "./components/Tools/BacktoTop/BacktoTop";
 import ScrollIndicator from "./components/Tools/Indicator/Indicator";
 
 function App() {
   return (
-    <>
     <div className="page-container">
         <ScrollIndicator/>
         <BacktoTop/>
@@ -22,7 +21,6 @@ function App() {
           </Routes>
         </BrowserRouter>
     </div>
-  </>
   );
 }
 
