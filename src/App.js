@@ -1,14 +1,17 @@
 import React from "react";
-import BacktoTop from "./components/BacktoTop/BacktoTop";
 import Home from "./pages/Home";
 import Analyze from "./pages/Analyze";
 import Contact from "./pages/Contact";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import BacktoTop from "./components/BacktoTop/BacktoTop";
+import ScrollIndicator from "./components/Indicator/Indicator";
 
 function App() {
   return (
     <>
     <div className="page-container">
+        <ScrollIndicator/>
+        <BacktoTop/>
         <BrowserRouter>
           <Routes>
             {/* client */}
