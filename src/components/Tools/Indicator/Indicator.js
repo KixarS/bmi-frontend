@@ -1,5 +1,6 @@
 import React, { useEffect , useState } from 'react'
 import { useWindowScroll } from 'react-use';
+import './Indicator.css'
 
 const ScrollIndicator = () => {
     const { y } = useWindowScroll()
@@ -10,10 +11,8 @@ const ScrollIndicator = () => {
         setScrolled( (( y/height ) * 100) )
 
     }, [y])
-    return 
-            <div className="scroll-container">
+    return <div className="scroll-container">
                 <div className="indicator" style={{ width: `${scrolled}%` }}></div>    
             </div>;
-};
-
+}
 export default ScrollIndicator;

@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardActionArea, CardMedia, Typography, Grid, IconButton } from '@mui/material';
+import { Box, Card, CardContent, CardActionArea, CardMedia, Typography, Grid} from '@mui/material';
 
 function ContactCard() {
     return(
