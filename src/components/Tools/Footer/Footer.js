@@ -6,10 +6,10 @@ import styled from 'styled-components'
 
 function FooterBar() {
     return(
-        <div className="main-footer">
+            <div className="main-footer">
             <div className='container'>
                 <div className='row'>
-                    <table width="100%" >
+                    <table width="100%">
                         <tr>
                             {/* column1 */}
                             <td>
