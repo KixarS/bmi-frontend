@@ -1,14 +1,11 @@
-import { Avatar, Container } from '@mui/material';
 import React from 'react'
-import BacktoTop from '../components/BacktoTop/BacktoTop';
-import NavBar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer';
+import NavBar from '../components/Tools/Navbar/Navbar'
+import Footer from '../components/Tools/Footer/Footer';
 
 function Home() {
   return (
     <div>
         <NavBar/>
-        <Container sx={{height:'100rem'}}/>
         <Footer/>
     </div>
   )

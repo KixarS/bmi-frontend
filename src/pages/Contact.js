@@ -1,8 +1,8 @@
 import React from 'react'
-import ContactCard from '../components/ContactCard/ContactCard';
+import ContactCard from '../components/Data/ContactCard/ContactCard';
 import { Box } from '@mui/system';
-import NavBar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
+import NavBar from '../components/Tools/Navbar/Navbar';
+import Footer from '../components/Tools/Footer/Footer';
 
 function Contact() {
   return (

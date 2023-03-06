@@ -99,19 +99,6 @@ return (
                             </Menu>
                         </Box>
 
-                        {/* FANCIER button (minimized window) */}
-                        <Button onClick={() => {navigate("/home");}}>
-                            <Typography
-                                variant="h6"
-                                noWrap
-                                component="div"
-                                sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-                                color="black"
-                            >
-                                BMI Calculator
-                            </Typography>
-                        </Button>
-
                         {/* box for app bar buttons */}
                         <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' }}} className="hover-underline">
                                 <nav>

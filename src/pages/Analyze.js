@@ -1,6 +1,6 @@
 import React from 'react'
-import NavBar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer';
+import NavBar from '../components/Tools/Navbar/Navbar'
+import Footer from '../components/Tools/Footer/Footer';
 import { Container } from '@mui/material';
 
 function Analyze() {

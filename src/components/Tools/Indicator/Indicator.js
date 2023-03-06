@@ -10,7 +10,8 @@ const ScrollIndicator = () => {
         setScrolled( (( y/height ) * 100) )
 
     }, [y])
-    return <div className="scroll-container">
+    return 
+            <div className="scroll-container">
                 <div className="indicator" style={{ width: `${scrolled}%` }}></div>    
             </div>;
 };
