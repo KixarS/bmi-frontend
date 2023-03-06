@@ -50,10 +50,6 @@ function FooterBar() {
                             <td>
                             
                             <Container maxWidth="auto">
-                                <Box>
-                                <br/>
-                                </Box><br/>
-
                                 <Box sx={{fontSize:25,fontFamily:"Sarabun" ,mx: "auto" }}>
                                     BMI Calculator
                                 </Box><br/>
@@ -67,7 +63,6 @@ function FooterBar() {
                                                     variant="square"
                                                     src="/img/chicken-logo.png"
                                                 />
-                                    
                                 </Box><br/>
                             </ul>
 
