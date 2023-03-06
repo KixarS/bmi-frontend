@@ -1,18 +1,15 @@
 import { Box, Card, CardContent, CardActionArea, CardMedia, Typography, Grid, IconButton } from '@mui/material';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
 
 function ContactCard() {
     return(
         <div>
-            
             <Box
                 sx={{
                     display: 'flex',
                     flexDirection:'row',
                     // border: '1px dashed grey',
                     align: "center",
-                    background: 'linear-gradient(45deg, #ffffff 30%, #dfe2e8  90%)',
+                    background: 'linear-gradient(#dfe2e8  90%)',
                     mx: 2,
                     mt: 2,
                     mb: 2,
@@ -91,7 +88,6 @@ function ContactCard() {
                     </Grid>
                 </Grid>
             </Box>
-            
             <Card sx={{ bgcolor:"#000000" }}>
                 <CardActionArea>
                     <CardMedia
@@ -103,52 +99,7 @@ function ContactCard() {
                     />
                 </CardActionArea>
             </Card>
-
-            <Box
-            sx={{ 
-                display: 'flex',
-                flexDirection:'row',
-                width: 600,
-                mx: "auto",
-                p: 2,
-                bottom: '50%',
-                // border: '1px dashed grey',
-            }}
-        >
-            <Box
-                sx={{ 
-                    display: 'flex',
-                    flexDirection:'column',
-                    width: '100%',
-                    height: 'auto',
-                    // border: '1px dashed grey',
-                }}
-            >
-                <IconButton aria-label='phone' sx={{ mx: 'auto', color: "#FFF"}}>
-                    <PhoneIcon/>
-                </IconButton>
-                <Typography sx={{ fontFamily:'Inconsolata',textAlign: 'center', color: "#FFF" }}>
-                    Phone: 098 7654321
-                </Typography>
-            </Box>
             
-            <Box
-                sx={{ 
-                    display: 'flex',
-                    flexDirection:'column',
-                    width: '100%',
-                    height: 'auto',
-                    // border: '1px dashed grey',
-                }}
-            >
-                <IconButton aria-label='phone' sx={{ mx: 'auto', color: "#FFF" }}>
-                    <EmailIcon/>
-                </IconButton>
-                <Typography sx={{ fontFamily:'Inconsolata',textAlign: 'center', color: "#FFF" }}>
-                    Email: 6410110xxx@psu.ac.th
-                </Typography>
-            </Box>
-        </Box> 
         </div>
     )
 };
