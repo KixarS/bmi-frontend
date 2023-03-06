@@ -50,6 +50,10 @@ function FooterBar() {
                             <td>
                             
                             <Container maxWidth="auto">
+                                    <Box>
+                                    <br/>
+                                    <br/>
+                                    </Box>
                                 <Box sx={{fontSize:25,fontFamily:"Sarabun" ,mx: "auto" }}>
                                     BMI Calculator
                                 </Box><br/>
@@ -78,6 +82,7 @@ function FooterBar() {
                                         <div style={{ textDecoration: 'none' }}><a href='/home'>BMI Calculator</a></div><br/>
                                         <div style={{ textDecoration: 'none' }}><a href='/contact'>Contact</a></div>
                                         <Box>
+                            <br/>
                             <br/>
                             </Box>
                                     </ul>
