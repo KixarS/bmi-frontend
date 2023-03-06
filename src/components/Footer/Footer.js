@@ -19,13 +19,24 @@ function FooterBar() {
                                         <ul className='list-unstyled'>
                                             <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' } }}>
                                                 <Avatar
-                                                    sx={{ width: 150, height: 100 }}
+                                                    sx={{ width: 180, height: 150 }}
                                                     variant="square"
                                                     src="/img/BMI-1-green-rmbg.png"
                                                 />
-                                    
                                             </Box><br/>
-                                            <div>BMI Calculator.</div>
+                                        </ul>
+                                    </div>
+                            </Container>
+                            </td>
+
+                            <td>
+                            <Container maxWidth="auto">
+                                    <div className='col'>
+                                        <ul className='list-unstyled'>
+                                            <Box sx={{fontSize:25,fontFamily:"Sarabun" ,mx: "auto" }}>
+                                                BMI Calculator
+                                            </Box><br/>
+                                            <div>BMI Calculator Website</div>
                                             <div>YEAR : 2 | GROUP NAME : Kai Sook</div>
                                             <div>Department of Computer Engineering</div>
                                             <div>Prince of Songkla University</div>
@@ -35,10 +46,14 @@ function FooterBar() {
                             </Container>
                             </td>
 
-                            {/* column2 */}
+                            {/* column3 */}
                             <td>
                             
                             <Container maxWidth="auto">
+                                <Box>
+                                <br/>
+                                </Box><br/>
+
                                 <Box sx={{fontSize:25,fontFamily:"Sarabun" ,mx: "auto" }}>
                                     BMI Calculator
                                 </Box><br/>
@@ -59,7 +74,7 @@ function FooterBar() {
                             </Container>
                             </td>
 
-                            {/* column3 */}
+                            {/* column4 */}
                             <td>
                             <FooterContainer maxWidth="auto">
                                 <div className='col'>
@@ -67,6 +82,9 @@ function FooterBar() {
                                     <ul className='list-unstyled'>
                                         <div style={{ textDecoration: 'none' }}><a href='/home'>BMI Calculator</a></div><br/>
                                         <div style={{ textDecoration: 'none' }}><a href='/contact'>Contact</a></div>
+                                        <Box>
+                            <br/>
+                            </Box>
                                     </ul>
                                 </div>
                             </FooterContainer>
