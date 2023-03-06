@@ -10,7 +10,9 @@ function HomeCard() {
           <LayeredText/>
           <Heart/>
       </Box>
-      
+      <Box sx={{ height:"80rem"}}>
+        
+      </Box>
     </div>
   )
 }
