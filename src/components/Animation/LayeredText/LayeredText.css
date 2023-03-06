@@ -8,7 +8,7 @@ span{
     font-size: 120px;
     font-weight: 600;
     letter-spacing: 25px;
-    color: #057727;
+    color: #21b899;
     cursor: pointer;
 }
 span:before{
@@ -22,13 +22,13 @@ span:before{
         135deg,
         transparent 0,
         transparent 2px,
-        #e5f019ac 2px,
-        #e5f019ac  4px
+        #87CEFA 2px,
+        #87CEFA  4px
     );
     -webkit-background-clip: text;
         background-clip: text;
     z-index: -1;
-    -webkit-text-stroke: 2px #e5f019ac;
+    -webkit-text-stroke: 2px #87CEFA;
     transition: 0.5s;
 }
 span:hover:before{
