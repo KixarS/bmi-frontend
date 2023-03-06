@@ -5,8 +5,8 @@ import './LayeredText.css'
 function LayeredText() {
   return (
     <Box>
-      <span data-text="bmicalculator">
-        BMICALCULATOR
+      <span data-text="bmi calculator">
+        BMI CALCULATOR
       </span>
     </Box>
       

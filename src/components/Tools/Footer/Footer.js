@@ -84,7 +84,6 @@ function FooterBar() {
                                         <Box>
                             <br/>
                             <br/>
-                            <br/>
                             </Box>
                                     </ul>
                                 </div>
