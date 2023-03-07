@@ -22,6 +22,7 @@
   }
   
   input {
+    font-family: 'Prompt', sans-serif;
     width: 600px;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -32,6 +33,7 @@
   }
   
   button {
+    font-family: 'Prompt', sans-serif;
     padding: 0.5rem 1rem;
     border: none;
     margin-top: 1rem;

@@ -27,9 +27,24 @@ function Calculator() {
       bmiClass = "อ้วนเกินไป";
     }
 
-    setResult(`ค่า BMI ของคุณคือ : ${bmi.toFixed(1)} (${bmiClass})`);
+    if (bmi > 0){
+      setResult(`ค่า BMI ของคุณคือ : ${bmi.toFixed(1)} (${bmiClass})`);
+    }
+  
+    if (height === "" && weight === "") {
+      window.alert("คำเตือน: กรุณากรอกส่วนสูงและน้ำหนัก")
+    } else if (weight === "") {
+      window.alert("คำเตือน: กรุณากรอกน้ำหนัก")
+    } else if (weight === "") {
+      window.alert("คำเตือน: กรุณากรอกส่วนสูง")
+    } else if (height === "0" && weight === "0") {
+      window.alert("คำเตือน: กรุณาตรวจสอบส่วนสูงและน้ำหนัก")
+    } else if (weight === "0") {
+      window.alert("คำเตือน: กรุณาตรวจสอบน้ำหนัก")
+    } else {
+      window.alert("คำเตือน: กรุณาตรวจสอบส่วนสูง")
   }
-
+}
   return (
     <Card sx={{ mr: '30rem', ml: '30rem', mt: '25rem', bgcolor: 'white', borderRadius:'5rem'}}>
       <div className="App">
