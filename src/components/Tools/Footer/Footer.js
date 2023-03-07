@@ -33,7 +33,7 @@ function FooterBar() {
                             <Container maxWidth="auto">
                                     <div className='col'>
                                         <ul className='list-unstyled'>
-                                            <Box sx={{fontSize:25,fontFamily:"Sarabun" ,mx: "auto" }}>
+                                            <Box sx={{fontSize:25,mx: "auto" }}>
                                                 BMI Calculator
                                             </Box><br/>
                                             <div>BMI Calculator Website</div>
@@ -54,7 +54,7 @@ function FooterBar() {
                                     <br/>
                                     <br/>
                                     </Box>
-                                <Box sx={{fontSize:25,fontFamily:"Sarabun" ,mx: "auto" }}>
+                                <Box sx={{fontSize:25,mx: "auto" }}>
                                     BMI Calculator
                                 </Box><br/>
                                 <Box sx={{fontSize:25,mx: "auto" ,fontFamily:"Sarabun"}}>
