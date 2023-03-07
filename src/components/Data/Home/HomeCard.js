@@ -2,6 +2,7 @@ import { Box, Card } from '@mui/material'
 import React from 'react'
 import Heart from '../../Animation/Heart/Heart'
 import LayeredText from '../../Animation/LayeredText/LayeredText'
+import './HomeCard.css'
 
 function HomeCard() {
   return (
