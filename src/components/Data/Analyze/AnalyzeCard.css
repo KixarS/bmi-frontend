@@ -4,13 +4,13 @@
 }
 
 .headerC2{
-    font-size: 36px;
+    font-size: 42px;
     font-weight: bold;
     text-align: right;
 
 }
 
-.row{
+.detail{
     text-align: left;
-
+    font-size: 30px;
 }

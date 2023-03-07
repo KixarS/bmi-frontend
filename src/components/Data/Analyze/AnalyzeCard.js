@@ -42,9 +42,9 @@ function Analyze() {
           <td>
             <Container maxWidth="auto">
               <div className='headerC1'>
-                <div>(ตัวเลข)
-                <br/>(ตัวเลข)
-                <br/>(ตัวเลข)
+                <div>26
+                <br/>170 cm.
+                <br/>70 kg.
                 </div>
               </div>
             </Container>
@@ -56,7 +56,7 @@ function Analyze() {
 
             {/* ค่าเฉลี่ยผู้ชาย */}
           <Card sx={{ p: 2.38, mt: 3 }}>
-      <div className='row'>
+      <div className='detail'>
         <table width="100%">
           <tr>
           <td>
@@ -66,7 +66,7 @@ function Analyze() {
               </div>
 
                 <br/>
-                <div>BMI เฉลี่ย
+                <div className='detail'>BMI เฉลี่ย
                 <br/>ส่วนสูงเฉลี่ย
                 <br/>น้ำหนักเฉลี่ย
               </div>
@@ -77,11 +77,9 @@ function Analyze() {
             <Container maxWidth="auto">
             <br/>
             <br/>
-            <br/>
-
-                <div>BMI เฉลี่ย (ตัวเลข)</div>
-                <div>ส่วนสูงเฉลี่ย (ตัวเลข)
-                <br/>น้ำหนักเฉลี่ย (ตัวเลข)
+                <div className='detail'>22
+                <br/>180 cm.
+                <br/>70 kg.
               </div>
             </Container>
           </td>
@@ -94,7 +92,7 @@ function Analyze() {
               </div>
 
                 <br/>
-                <div>BMI เฉลี่ย
+                <div className='detail'>BMI เฉลี่ย
                 <br/>ส่วนสูงเฉลี่ย
                 <br/>น้ำหนักเฉลี่ย
               </div>
@@ -105,11 +103,9 @@ function Analyze() {
             <Container maxWidth="auto">
             <br/>
             <br/>
-            <br/>
-
-                <div>BMI เฉลี่ย (ตัวเลข)</div>
-                <div>ส่วนสูงเฉลี่ย (ตัวเลข)
-                <br/>น้ำหนักเฉลี่ย (ตัวเลข)
+                <div className='detail'>20</div>
+                <div>120 cm.
+                <br/>50 kg.
               </div>
             </Container>
           </td>
