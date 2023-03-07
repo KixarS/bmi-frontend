@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 import { Box, Card, Container } from '@mui/material'
+>>>>>>> 5ea7e1cf0155772ac5a4d1dc8d92fb40fddace00
 import React from 'react'
 import './AnalyzeCard.css'
 
