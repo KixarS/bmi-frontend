@@ -1,44 +1,7 @@
-import { Grid, TextField } from '@mui/material';
-import styled from 'styled-components';
+import React, { useState } from "react";
 import './Calculator.css';
-import React, { useEffect, useState } from "react";
-
-
-const CssTextField = styled(TextField)({
-  '& label': {
-    color: 'black',
-  },
-  '& label.Mui-focused': {
-    color: 'white',
-  },
-  '& .MuiOutlinedInput-root': {
-    '& fieldset': {
-      borderColor: 'black',
-    },
-    '&:hover fieldset': {
-      borderColor: 'white',
-    },
-    '&.Mui-focused fieldset': {
-      borderColor: 'white',
-    },
-  },
-});
-
-
-
 
 function Calculator() {
-//   // search
-// const [filteredActivitycards, setFilteredActivitycards] = useState([])
-// const [search, setSearch] = useState("")
-
-// useEffect(() => {
-//     setFilteredActivitycards(
-//         activitycards.filter( searchcard => {
-//             return searchcard.name.includes(search)
-//         })
-//     )
-// }, [search, activitycards])
 
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
@@ -68,17 +31,6 @@ function Calculator() {
 
   return (
     <div className="App">
-        <Grid container justifyContent= "center">
-          <CssTextField 
-            id="search" 
-            label="Search" 
-            variant="outlined"
-            sx={{ mx: "0%", my: "auto", width:1000 }}
-            // onChange={e => setSearch(e.target.value)}
-          />  
-        </Grid>
-      
-      
       <div className="container">
         <label htmlFor="height">ส่วนสูง (cm)</label>
         <input type="number" id="height" name="height" value={height} onChange={(e) => setHeight(e.target.value)} required />
@@ -88,7 +40,7 @@ function Calculator() {
         <input type="number" id="weight" name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} required />
         <div className="error">{weightError}</div>
 
-        <button type="button" onClick={calculateBMI}>Calculate</button>
+        <button type="button" onClick={calculateBMI} >Calculate</button>
         <div id="result">{result}</div>
       </div>
     </div>

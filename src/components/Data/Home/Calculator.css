@@ -19,6 +19,7 @@
   
   label {
     margin-bottom: 0.5rem;
+    font-size: 30px;
   }
   
   input {
@@ -26,14 +27,14 @@
     margin-bottom: 1rem;
     border: none;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: 2rem;
   }
   
   button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     background-color: #61dafb;
     color: #282c34;
@@ -51,6 +52,6 @@
   }
   
   #result {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 2rem;
   }
