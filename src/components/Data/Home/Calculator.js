@@ -1,7 +1,45 @@
-import React, { useState } from 'react';
+import { Grid, TextField } from '@mui/material';
+import styled from 'styled-components';
 import './Calculator.css';
+import React, { useEffect, useState } from "react";
+
+
+const CssTextField = styled(TextField)({
+  '& label': {
+    color: 'black',
+  },
+  '& label.Mui-focused': {
+    color: 'white',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'black',
+    },
+    '&:hover fieldset': {
+      borderColor: 'white',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: 'white',
+    },
+  },
+});
+
+
+
 
 function Calculator() {
+//   // search
+// const [filteredActivitycards, setFilteredActivitycards] = useState([])
+// const [search, setSearch] = useState("")
+
+// useEffect(() => {
+//     setFilteredActivitycards(
+//         activitycards.filter( searchcard => {
+//             return searchcard.name.includes(search)
+//         })
+//     )
+// }, [search, activitycards])
+
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [heightError, setHeightError] = useState('');
@@ -30,6 +68,16 @@ function Calculator() {
 
   return (
     <div className="App">
+        <Grid container justifyContent= "center">
+          <CssTextField 
+            id="search" 
+            label="Search" 
+            variant="outlined"
+            sx={{ mx: "0%", my: "auto", width:1000 }}
+            // onChange={e => setSearch(e.target.value)}
+          />  
+        </Grid>
+      
       
       <div className="container">
         <label htmlFor="height">ส่วนสูง (cm)</label>

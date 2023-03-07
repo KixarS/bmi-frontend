@@ -7,7 +7,7 @@ import './HomeCard.css'
 function HomeCard() {
   return (
     <div>
-      <Box sx={{ height:"27rem" }}>
+      <Box sx={{ height:"2rem" }}>
           <LayeredText/>
           <Heart/>
       </Box>
@@ -34,7 +34,10 @@ function HomeCard() {
         >
 
         {/* BMI คืออะไร */}
+        
         <div className='header'>BMI คืออะไร</div>
+        
+        
         <div>
           ดัชนีมวลกาย หรือ BMI ย่อมาจาก Body Mass Index เป็นค่าสากลที่ใช้เพื่อคำนวณเพื่อหาน้ำหนักตัวที่ควรจะเป็น และประมาณระดับไขมันในร่างกายโดยใช้น้ำหนักตัว และส่วนสูง
           <br/>
