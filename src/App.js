@@ -5,6 +5,7 @@ import Contact from "./pages/ContactPage";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import BacktoTop from "./components/Tools/BacktoTop/BacktoTop";
 import ScrollIndicator from "./components/Tools/Indicator/Indicator";
+import "./components/Tools/Scrollbar/Scrollbar.css";
 
 function App() {
   return (
