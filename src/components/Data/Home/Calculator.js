@@ -27,7 +27,7 @@ function Calculator() {
       bmiClass = "อ้วนเกินไป";
     }
 
-    if (bmi > 0){
+    if (bmi > 0 && height !== "0" && weight !== "0"){
       setResult(`ค่า BMI ของคุณคือ : ${bmi.toFixed(1)} (${bmiClass})`);
     }
   
@@ -41,7 +41,7 @@ function Calculator() {
       window.alert("คำเตือน: กรุณาตรวจสอบส่วนสูงและน้ำหนัก")
     } else if (weight === "0") {
       window.alert("คำเตือน: กรุณาตรวจสอบน้ำหนัก")
-    } else {
+    } else if(height === "0") {
       window.alert("คำเตือน: กรุณาตรวจสอบส่วนสูง")
   }
 }
