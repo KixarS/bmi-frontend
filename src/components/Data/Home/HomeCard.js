@@ -6,7 +6,7 @@ import LayeredText from '../../Animation/LayeredText/LayeredText'
 function HomeCard() {
   return (
     <div>
-      <Box sx={{ height:"27rem"}}>
+      <Box sx={{ height:"27rem" }}>
           <LayeredText/>
           <Heart/>
       </Box>

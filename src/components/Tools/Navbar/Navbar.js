@@ -43,14 +43,15 @@ return (
                                     variant="square"
                                     src="/img/BMI-1-green-rmbg.png"
                                 />
-                           
+                        
                                 <Typography
-                                    variant="h4"
+                                    variant="h5"
                                     noWrap
-                                    color="black">
-                                    BMI Calculator
+                                    color="black"
+                                    fontWeight="500">
+                                    <div>BMI Calculator</div>
                                 </Typography>
- 
+
                             </Button> 
 
                         {/* Box for menu (when minimized window) */}
@@ -93,7 +94,7 @@ return (
                                 </MenuItem>
                                 <MenuItem onClick={handleCloseNavMenu}>
                                     <Box onClick={() => {navigate("/contact");}}>
-                                        <Typography textAlign="center" color="black">CONTACT <FontAwesomeIcon icon={faUsers}></FontAwesomeIcon></Typography>
+                                        <Typography textAlign="center" color="black">CONTACT<FontAwesomeIcon icon={faUsers}></FontAwesomeIcon></Typography>
                                     </Box>
                                 </MenuItem>
                             </Menu>
@@ -102,8 +103,8 @@ return (
                         {/* box for app bar buttons */}
                         <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' }}} className="hover-underline">
                                 <nav>
-                                    <a href='/analyze'>ANALYZE <FontAwesomeIcon icon={faAward}></FontAwesomeIcon></a>
-                                    <a href='/contact'>CONTACT <FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon></a>
+                                    <a href='/analyze'><div className='font-nav'>ANALYZE <FontAwesomeIcon icon={faAward}></FontAwesomeIcon></div></a>
+                                    <a href='/contact'><div className='font-nav'>CONTACT <FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon></div></a>
                                 </nav>
                         </Box>
                     </Toolbar>

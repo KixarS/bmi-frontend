@@ -36,3 +36,8 @@ a::after{
 a:hover::after{
     width: 100%;
 }
+
+font-nav{
+    font-size: 23px;
+    font-weight: 500;
+}
