@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAward, faUsers, faCalendarDays} from '@fortawesome/free-solid-svg-icons'
+import { faAddressBook, faChartPie} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from "react";
 import './hover-underline.css';
 
@@ -45,10 +45,10 @@ return (
                                 />
                         
                                 <Typography
-                                    variant="h5"
+                                    variant="h4"
                                     noWrap
                                     color="black"
-                                    fontWeight="500">
+                                    fontWeight="600">
                                     <div>BMI Calculator</div>
                                 </Typography>
 
@@ -89,12 +89,12 @@ return (
                             >
                                 <MenuItem onClick={handleCloseNavMenu}>
                                     <Box onClick={() => {navigate("/analyze");}}>
-                                        <Typography textAlign="center" color="black">ANALYZE<FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon></Typography>
+                                        <Typography textAlign="center" color="black">ANALYZE<FontAwesomeIcon icon={faChartPie}></FontAwesomeIcon></Typography>
                                     </Box>
                                 </MenuItem>
                                 <MenuItem onClick={handleCloseNavMenu}>
                                     <Box onClick={() => {navigate("/contact");}}>
-                                        <Typography textAlign="center" color="black">CONTACT<FontAwesomeIcon icon={faUsers}></FontAwesomeIcon></Typography>
+                                        <Typography textAlign="center" color="black">CONTACT<FontAwesomeIcon icon={faAddressBook}></FontAwesomeIcon></Typography>
                                     </Box>
                                 </MenuItem>
                             </Menu>
@@ -103,8 +103,8 @@ return (
                         {/* box for app bar buttons */}
                         <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' }}} className="hover-underline">
                                 <nav>
-                                    <a href='/analyze'><div className='font-nav'>ANALYZE <FontAwesomeIcon icon={faAward}></FontAwesomeIcon></div></a>
-                                    <a href='/contact'><div className='font-nav'>CONTACT <FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon></div></a>
+                                    <a href='/analyze'><div className='font-nav'>ANALYZE <FontAwesomeIcon icon={faChartPie}></FontAwesomeIcon></div></a>
+                                    <a href='/contact'><div className='font-nav'>CONTACT <FontAwesomeIcon icon={faAddressBook}></FontAwesomeIcon></div></a>
                                 </nav>
                         </Box>
                     </Toolbar>
