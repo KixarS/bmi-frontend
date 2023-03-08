@@ -94,10 +94,10 @@ function Calculator() {
             </Card>
             <Card sx={{ textAlign: 'center', padding: '3rem', borderRadius: '2rem', mr: '5rem', ml: '5rem', mt:'5rem',bgcolor:'grey' }}>
               <label htmlFor="height">ส่วนสูง (cm)</label><br />
-              <input type="number" id="height" name="height" value={height} onChange={(e) => setHeight(e.target.value)} required placeholder="กรอกส่วนสูงของท่าน" /><br />
+              <input type="number" id="height" name="height" value={height} onChange={(e) => setHeight(e.target.value)} min="100" max="250" required placeholder="กรอกส่วนสูงของท่าน" /><br />
 
               <label htmlFor="weight">น้ำหนัก (kg)</label><br />
-              <input type="number" id="weight" name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} required placeholder="กรอกน้ำหนักของท่าน" /><br />
+              <input type="number" id="weight" name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} min="20" max="200" required placeholder="กรอกน้ำหนักของท่าน" /><br />
 
               <button type="submit" onClick={calculateBMI} >Calculate BMI</button>
               <div id="result">{result}</div>
