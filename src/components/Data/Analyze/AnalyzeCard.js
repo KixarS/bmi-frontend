@@ -120,7 +120,7 @@ function Analyze() {
 
         {/* Card1 BMI เฉลี่ย */}
         <Box>
-          <Card sx={{ p: 2.38, paddingRight: 20, mt: 2 }}>
+          <Card sx={{ p: 2.38, paddingRight: 20, mt: 2 , borderRadius:'2rem'}}>
             <div className='row'>
               <table width="100%">
                 <tr>
@@ -145,7 +145,7 @@ function Analyze() {
           </Card>
 
           {/* Card2 ส่วนสูง */}
-          <Card sx={{ p: 2.38, paddingRight: 20, mt: 2 }}>
+          <Card sx={{ p: 2.38, paddingRight: 20, mt: 2 ,borderRadius:'2rem'}}>
             <table width="100%">
               <tr>
                 <td>
@@ -169,7 +169,7 @@ function Analyze() {
             </table>
           </Card>
 
-          <Card sx={{ p: 2.38, paddingRight: 20, mt: 2 }}>
+          <Card sx={{ p: 2.38, paddingRight: 20, mt: 2,borderRadius:'2rem' }}>
             <table width="100%">
               <tr>
                 <td>
@@ -192,7 +192,7 @@ function Analyze() {
           </Card>
         </Box>
         {/* ค่าเฉลี่ยผู้ชาย */}
-      <Card sx={{ p: 2.38, mt: 3, }}>
+      <Card sx={{ p: 2.38, mt: 3, borderRadius:'2rem'}}>
         <div className='detail'>
           <table width="100%">
             <tr>
