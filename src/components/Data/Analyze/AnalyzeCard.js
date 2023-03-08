@@ -1,17 +1,104 @@
-import styled from '@emotion/styled';
-import { Box, Card, CardContent, Container, Grid, Typography } from '@mui/material'
-import Paper from '@mui/material/Paper';
-import React from 'react'
+import { Box, Card, Container, Grid } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import { db } from '../Home/firebase'
 import './AnalyzeCard.css'
 
 function Analyze() {
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+
+  useEffect(() => {
+    db.collection('bmiform').onSnapshot(snapshot => {
+      setData(snapshot.docs.map(doc => ({
+        id: doc.id,
+        bmi: doc.data().BMI,
+        gender: doc.data().gender,
+        height: doc.data().height,
+        weight: doc.data().weight,
+      })))
+    })
+  }, []);
+
+  const [data, setData] = useState([]);
+
+  // Average BMI
+  let length = data.length;
+  let totalBMI = 0;
+  let totalMale = 0;
+  let totalFemale = 0;
+
+  for (let i = 0; i < length; i++) {
+    totalBMI += Number(data[i].bmi);
+  };
+
+  let avgBMI = totalBMI / length;
+
+  // Average Height
+  let totalHeight = 0;
+  for (let i = 0; i < length; i++) {
+    totalHeight += Number(data[i].height);
+  };
+  let avgHeight = totalHeight / length;
+
+  // Average Weight
+  let totalWeight = 0;
+  for (let i = 0; i < length; i++) {
+    totalWeight += Number(data[i].weight);
+  };
+  let avgWeight = totalWeight / length;
+
+  //Average Male and Female BMI 
+  let totalMaleBMI = 0;
+  let totalFemaleBMI = 0;
+  for (let i = 0; i < length; i++) {
+    if (data[i].gender === "Male"){
+      totalMaleBMI += Number(data[i].bmi);
+      totalMale += 1 ;
+    } else if ( data[i].gender === "Female"){
+      totalFemaleBMI += Number(data[i].bmi);
+      totalFemale += 1 ;
+    }
+  };
+  let avgMaleBMI = totalMaleBMI / totalMale;
+  let avgFemaleBMI = totalFemaleBMI / totalFemale;
+
+  //Average Male and Female Height 
+  let totalMaleHeight = 0;
+  let totalFemaleHeight = 0;
+  for (let i = 0; i < length; i++) {
+    if (data[i].gender === "Male"){
+      totalMaleHeight += Number(data[i].height);
+    } else if ( data[i].gender === "Female"){
+      totalFemaleHeight += Number(data[i].height);
+    }
+  };
+  let avgMaleHeight = totalMaleHeight / totalMale;
+  let avgFemaleHeight = totalFemaleHeight / totalFemale;
+
+  //Average Male and Female Height 
+  let totalMaleWeight = 0;
+  let totalFemaleWeight = 0;
+  for (let i = 0; i < length; i++) {
+    if (data[i].gender === "Male"){
+      totalMaleWeight += Number(data[i].weight);
+    } else if ( data[i].gender === "Female"){
+      totalFemaleWeight += Number(data[i].weight);
+    }
+  };
+  let avgMaleWeight = totalMaleWeight / totalMale;
+  let avgFemaleWeight = totalFemaleWeight / totalFemale;
+
+
+  console.log("Average BMI : ", avgBMI);
+  console.log("Average Male BMI : ", avgMaleBMI);
+  console.log("Average Female BMI : ", avgFemaleBMI);
+  console.log("");
+  console.log("Average Height :", avgHeight);
+  console.log("Average Male Height :", avgMaleHeight);
+  console.log("Average Female Height :", avgFemaleHeight);
+  console.log("");
+  console.log("Average Weight :", avgWeight);
+  console.log("Average Male Weight :", avgMaleWeight);
+  console.log("Average Female Weight :", avgFemaleWeight);
+
 
   return (
     <div>
