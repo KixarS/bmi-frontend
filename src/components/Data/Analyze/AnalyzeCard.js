@@ -73,7 +73,7 @@ function Analyze() {
   let avgMaleHeight = totalMaleHeight / totalMale;
   let avgFemaleHeight = totalFemaleHeight / totalFemale;
 
-  //Average Male and Female Height 
+  //Average Male and Female Weight
   let totalMaleWeight = 0;
   let totalFemaleWeight = 0;
   for (let i = 0; i < length; i++) {
@@ -135,7 +135,7 @@ function Analyze() {
                   <td>
                     <Container maxWidth="auto">
                       <div className='number'>
-                        <div>26 kg/m</div>
+                        <div>{avgBMI} kg/m</div>
                       </div>
                     </Container>
                   </td>
@@ -161,7 +161,7 @@ function Analyze() {
                 <td>
                   <Container maxWidth="auto">
                     <div className='number'>
-                      <div>160 cm</div>
+                      <div>{avgHeight} cm.</div>
                     </div>
                   </Container>
                 </td>
@@ -183,7 +183,7 @@ function Analyze() {
                 <td>
                   <Container maxWidth="auto">
                     <div className='number'>
-                      <div>70 kg</div>
+                      <div>{avgWeight} kg.</div>
                     </div>
                   </Container>
                 </td>
@@ -213,9 +213,9 @@ function Analyze() {
               <td>
                 <Container maxWidth="auto">
                   <div className='number'>
-                    <div><br/>22 kg/m
-                      <br/>150 cm.
-                      <br/>70 kg.
+                    <div><br/>{avgMaleBMI} kg/m
+                      <br/>{avgMaleHeight} cm.
+                      <br/>{avgMaleWeight} kg.
                     </div>
                   </div>
                 </Container>
@@ -243,9 +243,9 @@ function Analyze() {
               <td>
                 <Container maxWidth="auto">
                   <div className='number'>
-                    <div><br/>22 kg/m
-                      <br/>150 cm.
-                      <br/>70 kg.
+                    <div><br/>{avgFemaleBMI} kg/m
+                      <br/>{avgFemaleHeight} cm.
+                      <br/>{avgFemaleWeight} kg.
                     </div>
                   </div>
                 </Container>
