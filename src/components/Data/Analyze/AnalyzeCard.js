@@ -1,4 +1,4 @@
-import { Box, Card, Container, Grid } from '@mui/material'
+import { Box, Card, Container } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { db } from '../Home/firebase'
 import './AnalyzeCard.css'
