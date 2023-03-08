@@ -26,7 +26,7 @@ function Calculator() {
       height: height,
       weight: weight,
       BMI: BMI,
-      gender:gender
+      gender: gender
     })
       .then(() => {
         alert('Submitted')
@@ -73,26 +73,27 @@ function Calculator() {
     }
   }
   return (
+
     <form className="form" onSubmit={handleSubmit}>
-      <Card sx={{ mr: '30rem', ml: '30rem', mt: '25rem', bgcolor: 'white', borderRadius: '5rem', position: 'relative' }}>
+      <Card sx={{ mr: '30rem', ml: '30rem', mt: '26rem', bgcolor: 'white', borderRadius: '5rem', position: 'relative' }}>
         <div className="App">
           <div className="container">
-            <Card sx={{ mr: '5rem', ml: '5rem' , borderRadius: '2rem',textAlign: 'center',padding: '2rem', bgcolor:'grey'}}>
-                <label htmlFor="weight" >เพศ (Gender)</label>
-                <Grid container spacing={2} direction="row">
-                  <Grid item xs>
-                    <Item>
-                      <input type="radio" id="male" name="gender" value="Male" onChange={(e) => setGender(e.target.value)} /><br/>เพศชาย ( Male )
-                    </Item>
-                  </Grid>
-                  <Grid item xs>
-                    <Item>
-                      <input type="radio" id="female" name="gender" value="Female" onChange={(e) => setGender(e.target.value)} /><br/>เพศหญิง ( Female )
-                    </Item>
-                  </Grid>
+            <Card sx={{ mr: '5rem', ml: '5rem', borderRadius: '2rem', textAlign: 'center', padding: '3rem', bgcolor: 'grey' }}>
+              <label htmlFor="weight" >เพศ (Gender)</label>
+              <Grid container spacing={3}>
+                <Grid item xs={6}>
+                  <Item>
+                    <input type="radio" id="male" name="gender" value="Male" onChange={(e) => setGender(e.target.value)} /><br />เพศชาย ( Male )
+                  </Item>
                 </Grid>
+                <Grid item xs={6}>
+                  <Item>
+                    <input type="radio" id="female" name="gender" value="Female" onChange={(e) => setGender(e.target.value)} /><br />เพศหญิง ( Female )
+                  </Item>
+                </Grid>
+              </Grid>
             </Card>
-            <Card sx={{ textAlign: 'center', padding: '3rem', borderRadius: '2rem', mr: '5rem', ml: '5rem', mt:'5rem',bgcolor:'grey' }}>
+            <Card sx={{ textAlign: 'center', padding: '3rem', borderRadius: '2rem', mr: '5rem', ml: '5rem', mt: '3rem', mb:'1rem', bgcolor: 'grey' }}>
               <label htmlFor="height">ส่วนสูง (cm)</label><br />
               <input type="number" id="height" name="height" value={height} onChange={(e) => setHeight(e.target.value)} min="100" max="250" required placeholder="กรอกส่วนสูงของท่าน" /><br />
 
