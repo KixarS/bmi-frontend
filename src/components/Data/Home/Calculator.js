@@ -11,6 +11,8 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
+
 function Calculator() {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
@@ -75,10 +77,10 @@ function Calculator() {
   return (
 
     <form className="form" onSubmit={handleSubmit}>
-      <Card sx={{ mr: '30rem', ml: '30rem', mt: '26rem', bgcolor: 'white', borderRadius: '5rem', position: 'relative' }}>
+      <Card sx={{ mr: '30rem', ml: '30rem', mt: '26rem', bgcolor: '#4db6ac', borderRadius: '5rem', position: 'relative' }}>
         <div className="App">
           <div className="container">
-            <Card sx={{ mr: '5rem', ml: '5rem', borderRadius: '2rem', textAlign: 'center', padding: '3rem', bgcolor: 'grey' }}>
+            <Card sx={{ mr: '5rem', ml: '5rem', borderRadius: '2rem', textAlign: 'center', padding: '3rem', bgcolor: '#ffd54f' }}>
               <label htmlFor="weight" >เพศ (Gender)</label>
               <Grid container spacing={3}>
                 <Grid item xs={6}>
@@ -93,7 +95,7 @@ function Calculator() {
                 </Grid>
               </Grid>
             </Card>
-            <Card sx={{ textAlign: 'center', padding: '3rem', borderRadius: '2rem', mr: '5rem', ml: '5rem', mt: '3rem', mb:'1rem', bgcolor: 'grey' }}>
+            <Card sx={{ textAlign: 'center', padding: '3rem', borderRadius: '2rem', mr: '5rem', ml: '5rem', mt: '3rem', mb:'1rem', bgcolor: '#ffd54f' }}>
               <label htmlFor="height">ส่วนสูง (cm)</label><br />
               <input type="number" id="height" name="height" value={height} onChange={(e) => setHeight(e.target.value)} min="100" max="250" required placeholder="กรอกส่วนสูงของท่าน" /><br />
 

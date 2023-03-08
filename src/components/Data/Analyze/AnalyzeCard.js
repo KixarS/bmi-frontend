@@ -29,62 +29,62 @@ function Analyze() {
     totalBMI += Number(data[i].bmi);
   };
 
-  let avgBMI = totalBMI / length;
+  let avgBMI = (totalBMI / length).toFixed(2);
 
   // Average Height
   let totalHeight = 0;
   for (let i = 0; i < length; i++) {
     totalHeight += Number(data[i].height);
   };
-  let avgHeight = totalHeight / length;
+  let avgHeight = (totalHeight / length).toFixed(2);
 
   // Average Weight
   let totalWeight = 0;
   for (let i = 0; i < length; i++) {
     totalWeight += Number(data[i].weight);
   };
-  let avgWeight = totalWeight / length;
+  let avgWeight = (totalWeight / length).toFixed(2);
 
   //Average Male and Female BMI 
   let totalMaleBMI = 0;
   let totalFemaleBMI = 0;
   for (let i = 0; i < length; i++) {
-    if (data[i].gender === "Male"){
+    if (data[i].gender === "Male") {
       totalMaleBMI += Number(data[i].bmi);
-      totalMale += 1 ;
-    } else if ( data[i].gender === "Female"){
+      totalMale += 1;
+    } else if (data[i].gender === "Female") {
       totalFemaleBMI += Number(data[i].bmi);
-      totalFemale += 1 ;
+      totalFemale += 1;
     }
   };
-  let avgMaleBMI = totalMaleBMI / totalMale;
-  let avgFemaleBMI = totalFemaleBMI / totalFemale;
+  let avgMaleBMI = (totalMaleBMI / totalMale).toFixed(2);
+  let avgFemaleBMI = (totalFemaleBMI / totalFemale).toFixed(2);
 
   //Average Male and Female Height 
   let totalMaleHeight = 0;
   let totalFemaleHeight = 0;
   for (let i = 0; i < length; i++) {
-    if (data[i].gender === "Male"){
+    if (data[i].gender === "Male") {
       totalMaleHeight += Number(data[i].height);
-    } else if ( data[i].gender === "Female"){
+    } else if (data[i].gender === "Female") {
       totalFemaleHeight += Number(data[i].height);
     }
   };
-  let avgMaleHeight = totalMaleHeight / totalMale;
-  let avgFemaleHeight = totalFemaleHeight / totalFemale;
+  let avgMaleHeight = (totalMaleHeight / totalMale).toFixed(2);
+  let avgFemaleHeight = (totalFemaleHeight / totalFemale).toFixed(2);
 
   //Average Male and Female Weight
   let totalMaleWeight = 0;
   let totalFemaleWeight = 0;
   for (let i = 0; i < length; i++) {
-    if (data[i].gender === "Male"){
+    if (data[i].gender === "Male") {
       totalMaleWeight += Number(data[i].weight);
-    } else if ( data[i].gender === "Female"){
+    } else if (data[i].gender === "Female") {
       totalFemaleWeight += Number(data[i].weight);
     }
   };
-  let avgMaleWeight = totalMaleWeight / totalMale;
-  let avgFemaleWeight = totalFemaleWeight / totalFemale;
+  let avgMaleWeight = (totalMaleWeight / totalMale).toFixed(2);
+  let avgFemaleWeight = (totalFemaleWeight / totalFemale).toFixed(2);
 
 
   console.log("Average BMI : ", avgBMI);
@@ -191,72 +191,68 @@ function Analyze() {
             </table>
           </Card>
         </Box>
+        {/* ค่าเฉลี่ยผู้ชาย */}
+      <Card sx={{ p: 2.38, mt: 3, }}>
+        <div className='detail'>
+          <table width="100%">
+            <tr>
+              <td>
+                <Container maxWidth="auto">
+                  <div className='headerC2'>
+                    <div>ผู้ชาย</div>
+                  </div>
+
+                  <br />
+                  <div className='detail'>BMI เฉลี่ย
+                    <br />ส่วนสูงเฉลี่ย
+                    <br />น้ำหนักเฉลี่ย
+                  </div>
+                </Container>
+              </td>
+
+              <td>
+                <Container maxWidth="auto">
+                  <br />
+                  <br />
+                  <div className='detail'>{avgMaleBMI} kg/m
+                    <br />{avgMaleHeight} cm
+                    <br />{avgMaleWeight} kg
+                  </div>
+                </Container>
+              </td>
+
+              {/* ค่าเฉลี่ยผู้หญิง */}
+              <td>
+                <Container maxWidth="auto">
+                  <div className='headerC2'>
+                    <div>ผู้หญิง</div>
+                  </div>
+
+                  <br />
+                  <div className='detail'>BMI เฉลี่ย
+                    <br />ส่วนสูงเฉลี่ย
+                    <br />น้ำหนักเฉลี่ย
+                  </div>
+                </Container>
+              </td>
+
+              <td>
+                <Container maxWidth="auto">
+                  <br />
+                  <br />
+                  <div className='detail'>{avgFemaleBMI} kg/m</div>
+                  <div>{avgFemaleHeight} cm
+                    <br />{avgFemaleWeight} kg
+                  </div>
+                </Container>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </Card>
       </Box>
 
-      <Grid container spacing={3} justifyContent="center" paddingBottom={3}>
-        <Card sx={{ p: 2.38, paddingRight:'auto' ,paddingLeft:'auto', mt: 2, }}>
-          <table width="100%">
-            <tr>
-              <td>
-                <Container maxWidth="auto">
-                  <div className='headerC2'>
-                    เพศชาย
-                  </div>
-                  <div className='detail'>
-                    BMI<br/>
-                    ส่วนสูงเฉลี่ย<br/>
-                    น้ำหนักเฉลี่ย
-                  </div>
-                </Container>
-              </td>
-
-              <td>
-                <Container maxWidth="auto">
-                  <div className='number'>
-                    <div><br/>{avgMaleBMI} kg/m
-                      <br/>{avgMaleHeight} cm.
-                      <br/>{avgMaleWeight} kg.
-                    </div>
-                  </div>
-                </Container>
-              </td>
-            </tr>
-          </table>
-        </Card>
-
-        <Card sx={{ p: 3, paddingRight:'auto' ,paddingLeft:'auto', mt: 2 }}>
-          <table width="100%">
-            <tr>
-              <td>
-                <Container maxWidth="auto">
-                  <div className='headerC2'>
-                    เพศหญิง
-                  </div>
-                  <div className='detail'>
-                    BMI<br/>
-                    ส่วนสูงเฉลี่ย<br/>
-                    น้ำหนักเฉลี่ย
-                  </div>
-                </Container>
-              </td>
-
-              <td>
-                <Container maxWidth="auto">
-                  <div className='number'>
-                    <div><br/>{avgFemaleBMI} kg/m
-                      <br/>{avgFemaleHeight} cm.
-                      <br/>{avgFemaleWeight} kg.
-                    </div>
-                  </div>
-                </Container>
-              </td>
-            </tr>
-          </table>
-        </Card>
-      </Grid>
-
-
-    </div>
+    </div >
 
   )
 }
