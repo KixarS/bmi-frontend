@@ -1,28 +1,39 @@
-import { Card } from "@mui/material";
+import { Card, Grid, Paper, styled } from "@mui/material";
 import React, { useState } from "react";
 import { db } from "./firebase";
 import './Calculator.css';
 
-function Calculator() {
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
+function Calculator() {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [result, setResult] = useState('');
+  const [BMI, setBMI] = useState('');
+
+  const [gender, setGender] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     db.collection('bmiform').add({
-      height:height,
-      weight:weight,
-      BMI:result
+      height: height,
+      weight: weight,
+      BMI: BMI,
+      gender:gender
     })
-    .then(() => {
-      alert('Submitted')
-    })
-    .catch(error => {
-      alert(error.message);
-    })
+      .then(() => {
+        alert('Submitted')
+      })
+      .catch(error => {
+        alert(error.message);
+      })
   }
 
 
@@ -42,10 +53,11 @@ function Calculator() {
       bmiClass = "อ้วนเกินไป";
     }
 
-    if (bmi > 0 && height !== "0" && weight !== "0"){
+    if (bmi > 0 && height !== "0" && weight !== "0") {
       setResult(`ค่า BMI ของคุณคือ : ${bmi.toFixed(1)} (${bmiClass})`);
+      setBMI(`${bmi.toFixed(1)}`);
     }
-  
+
     if (height === "" && weight === "") {
       window.alert("คำเตือน: กรุณากรอกส่วนสูงและน้ำหนัก")
     } else if (weight === "") {
@@ -56,24 +68,40 @@ function Calculator() {
       window.alert("คำเตือน: กรุณาตรวจสอบส่วนสูงและน้ำหนัก")
     } else if (weight === "0") {
       window.alert("คำเตือน: กรุณาตรวจสอบน้ำหนัก")
-    } else if(height === "0") {
+    } else if (height === "0") {
       window.alert("คำเตือน: กรุณาตรวจสอบส่วนสูง")
+    }
   }
-}
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <Card sx={{ mr: '30rem', ml: '30rem', mt: '25rem', bgcolor: 'white', borderRadius: '5rem' }}>
+      <Card sx={{ mr: '30rem', ml: '30rem', mt: '25rem', bgcolor: 'white', borderRadius: '5rem', position: 'relative' }}>
         <div className="App">
           <div className="container">
+            <Card sx={{ mr: '5rem', ml: '5rem' , borderRadius: '2rem',textAlign: 'center',padding: '2rem', bgcolor:'grey'}}>
+                <label htmlFor="weight" >เพศ (Gender)</label>
+                <Grid container spacing={2} direction="row">
+                  <Grid item xs>
+                    <Item>
+                      <input type="radio" id="male" name="gender" value="Male" onChange={(e) => setGender(e.target.value)} /><br/>เพศชาย ( Male )
+                    </Item>
+                  </Grid>
+                  <Grid item xs>
+                    <Item>
+                      <input type="radio" id="female" name="gender" value="Female" onChange={(e) => setGender(e.target.value)} /><br/>เพศหญิง ( Female )
+                    </Item>
+                  </Grid>
+                </Grid>
+            </Card>
+            <Card sx={{ textAlign: 'center', padding: '3rem', borderRadius: '2rem', mr: '5rem', ml: '5rem', mt:'5rem',bgcolor:'grey' }}>
+              <label htmlFor="height">ส่วนสูง (cm)</label><br />
+              <input type="number" id="height" name="height" value={height} onChange={(e) => setHeight(e.target.value)} required placeholder="กรอกส่วนสูงของท่าน" /><br />
 
-            <label htmlFor="height">ส่วนสูง (cm)</label>
-            <input type="number" id="height" name="height" value={height} onChange={(e) => setHeight(e.target.value)} required />
+              <label htmlFor="weight">น้ำหนัก (kg)</label><br />
+              <input type="number" id="weight" name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} required placeholder="กรอกน้ำหนักของท่าน" /><br />
 
-            <label htmlFor="weight">น้ำหนัก (kg)</label>
-            <input type="number" id="weight" name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} required />
-
-            <button type="submit" onClick={calculateBMI} >Calculate</button>
-            <div id="result">{result}</div>
+              <button type="submit" onClick={calculateBMI} >Calculate BMI</button>
+              <div id="result">{result}</div>
+            </Card>
           </div>
         </div>
       </Card>

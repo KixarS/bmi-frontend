@@ -38,7 +38,7 @@ function Analyze() {
           <td>
             <Container maxWidth="auto">
               <div className='number'>
-                <div>26 BMI</div>
+                <div>26 kg/m</div>
               </div>
             </Container>
           </td>
@@ -64,7 +64,7 @@ function Analyze() {
           <td>
             <Container maxWidth="auto">
               <div className='number'>
-                <div>160 cm.</div>
+                <div>160 cm</div>
               </div>
             </Container>
           </td>
@@ -86,7 +86,7 @@ function Analyze() {
           <td>
             <Container maxWidth="auto">
               <div className='number'>
-                <div>70 kg.</div>
+                <div>70 kg</div>
               </div>
             </Container>
           </td>
@@ -117,9 +117,9 @@ function Analyze() {
             <Container maxWidth="auto">
             <br/>
             <br/>
-                <div className='detail'>22 BMI
-                <br/>180 cm.
-                <br/>70 kg.
+                <div className='detail'>22 kg/m
+                <br/>180 cm
+                <br/>70 kg
               </div>
             </Container>
           </td>
@@ -143,9 +143,9 @@ function Analyze() {
             <Container maxWidth="auto">
             <br/>
             <br/>
-                <div className='detail'>20 BMI</div>
-                <div>120 cm.
-                <br/>50 kg.
+                <div className='detail'>20 kg/m</div>
+                <div>120 cm
+                <br/>50 kg
               </div>
             </Container>
           </td>
